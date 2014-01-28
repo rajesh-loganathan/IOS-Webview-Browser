@@ -30,6 +30,11 @@
 {
     [super viewDidLoad];
     [self activityIndicator];
+    
+    NSString *googleurl = [NSString stringWithFormat:@"http://www.techdevmobile.com"];
+    NSURL *url = [NSURL URLWithString:googleurl];
+    NSURLRequest *requestconn = [NSURLRequest requestWithURL:url];
+    [webview loadRequest:requestconn];
 }
 
 - (void)didReceiveMemoryWarning
